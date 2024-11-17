@@ -56,7 +56,7 @@ const ImageContainer = styled.div`
   flex-direction: column; /* 세로 정렬 */
   align-items: center; /* 가로 중앙 정렬 */
   gap: 20px; /* 이미지 사이의 간격 */
-  margin-top: 20px;
+  margin-bottom: 100px;
 `;
 
 const LoadingImage = styled.img`
