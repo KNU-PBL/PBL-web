@@ -24,7 +24,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_KEY }}
           script: |
-            cd /home/ubuntu/pbl-web/
+            cd /home/ubuntu/PBL-web/
             git pull origin main
             npm install
             nohup npm start &
