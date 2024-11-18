@@ -33,4 +33,5 @@ const LogoImage = styled.img`
 const TitleText = styled.div`
   display: flex;
   font-size: 60px;
+  font-weight: 600;
 `;

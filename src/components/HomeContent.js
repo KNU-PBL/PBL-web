@@ -26,6 +26,7 @@ const HomeButton = styled.button`
   padding: 30px;
   width: 80%;
   font-size: 35px;
+  font-weight: 500;
   font-family: inherit;
   border-radius: 50px;
   border: 1px solid #fff;
