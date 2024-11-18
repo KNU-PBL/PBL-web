@@ -3,6 +3,8 @@ import Container from "../styles/Container";
 import styled, { keyframes } from "styled-components";
 import dgm_logo from "../assets/images/dgm_logo.png";
 import bi_logo from "../assets/images/bi_logo.png";
+import HomeTitle from "../components/HomeTitle";
+import HomeContent from "../components/HomeContent";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true); // 로딩 상태
@@ -36,7 +38,10 @@ const Home = () => {
           </ImageContainer>
         </Container>
       ) : (
-        <Container>Home</Container>
+        <Container>
+          <HomeTitle />
+          <HomeContent />
+        </Container>
       )}
     </>
   );
@@ -53,7 +58,10 @@ const fadeInOut = keyframes`
 // 이미지를 세로로 정렬하는 컨테이너
 const ImageContainer = styled.div`
   display: flex;
+  width: 100%;
+  height: 80vh;
   flex-direction: column; /* 세로 정렬 */
+  justify-content: center;
   align-items: center; /* 가로 중앙 정렬 */
   gap: 20px; /* 이미지 사이의 간격 */
   margin-bottom: 100px;
