@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import Container from "../styles/Container";
+import React, { useEffect, useState } from "react";
 import Header from "../components/common/Header";
-import UnknownContent from "../components/unknown/UnknownContent";
 import { useNavigate } from "react-router-dom";
+import Container from "../styles/Container";
 import LoadingBar from "../components/common/LoadingBar";
+import AccessContent from "../components/access/AccessContent";
 
-const Unknown = () => {
+const AccessLog = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -24,12 +24,12 @@ const Unknown = () => {
         <Container>{isLoading && <LoadingBar />}</Container>
       ) : (
         <Container>
-          <Header title={"미등록자 인식 기록"} goToBack={goToBack} />
-          <UnknownContent />
+          <Header title={"출입 기록 조회"} goToBack={goToBack} />
+          <AccessContent />
         </Container>
       )}
     </>
   );
 };
 
-export default Unknown;
+export default AccessLog;

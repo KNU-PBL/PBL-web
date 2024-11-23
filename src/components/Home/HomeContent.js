@@ -14,7 +14,13 @@ const HomeContent = () => {
       >
         미등록자 인식 기록
       </HomeButton>
-      <HomeButton>출입 기록 관리</HomeButton>
+      <HomeButton
+        onClick={() => {
+          navigate("/access");
+        }}
+      >
+        출입 기록 관리
+      </HomeButton>
       <HomeButton>사용자 목록</HomeButton>
     </HomeContentContainer>
   );

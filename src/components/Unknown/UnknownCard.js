@@ -19,7 +19,7 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   background: #383838;
-  width: 80%;
+  width: 100%;
   padding: 20px;
   font-size: 20px;
   font-weight: 600;
@@ -33,7 +33,6 @@ const Notice = styled.div`
   display: flex;
   justify-content: center;
   font-size: 30px;
-  padding: 20px;
 `;
 
 const ConfirmButtonContainer = styled.div`

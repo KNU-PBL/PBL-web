@@ -3,8 +3,8 @@ import Container from "../styles/Container";
 import styled, { keyframes } from "styled-components";
 import dgm_logo from "../assets/images/dgm_logo.png";
 import bi_logo from "../assets/images/bi_logo.png";
-import HomeTitle from "../components/Home/HomeTitle";
-import HomeContent from "../components/Home/HomeContent";
+import HomeTitle from "../components/home/HomeTitle";
+import HomeContent from "../components/home/HomeContent";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true); // 로딩 상태
