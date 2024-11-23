@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Container from "../styles/Container";
 import Header from "../components/common/Header";
-import UnknownContent from "../components/Unknown/UnknownContent";
+import UnknownContent from "../components/unknown/UnknownContent";
 import { useNavigate } from "react-router-dom";
 import LoadingBar from "../components/common/LoadingBar";
 
