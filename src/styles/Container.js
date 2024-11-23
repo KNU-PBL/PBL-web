@@ -10,6 +10,7 @@ const Container = styled.div`
   box-sizing: border-box;
   background-color: #000;
   color: #fff;
+  overflow-y: scroll;
 
   @media (max-width: 1024px) {
     max-width: 800px;
