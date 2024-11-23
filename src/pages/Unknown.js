@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import Container from "../styles/Container";
 import Header from "../components/common/Header";
 import UnknownContent from "../components/Unknown/UnknownContent";
 import { useNavigate } from "react-router-dom";
+import LoadingBar from "../components/common/LoadingBar";
 
 const Unknown = () => {
   const navigate = useNavigate();
@@ -31,24 +31,5 @@ const Unknown = () => {
     </>
   );
 };
-
-const LoadingBar = styled.div`
-  width: 70%;
-  height: 4px;
-  margin: auto;
-  background-color: white;
-  animation: loading 1s infinite;
-
-  @keyframes loading {
-    0% {
-      transform: scaleX(0);
-      transform-origin: left;
-    }
-    100% {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-  }
-`;
 
 export default Unknown;
