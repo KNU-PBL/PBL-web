@@ -21,7 +21,13 @@ const HomeContent = () => {
       >
         출입 기록 관리
       </HomeButton>
-      <HomeButton>사용자 목록</HomeButton>
+      <HomeButton
+        onClick={() => {
+          navigate("/user");
+        }}
+      >
+        사용자 목록
+      </HomeButton>
     </HomeContentContainer>
   );
 };
