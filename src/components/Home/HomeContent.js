@@ -1,10 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const HomeContent = () => {
+  const navigate = useNavigate();
+
   return (
     <HomeContentContainer>
-      <HomeButton>미등록 출입 알림</HomeButton>
+      <HomeButton
+        onClick={() => {
+          navigate("/unknown");
+        }}
+      >
+        미등록자 인식 기록
+      </HomeButton>
       <HomeButton>출입 기록 관리</HomeButton>
       <HomeButton>사용자 목록</HomeButton>
     </HomeContentContainer>

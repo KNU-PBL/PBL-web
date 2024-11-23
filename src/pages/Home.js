@@ -3,8 +3,8 @@ import Container from "../styles/Container";
 import styled, { keyframes } from "styled-components";
 import dgm_logo from "../assets/images/dgm_logo.png";
 import bi_logo from "../assets/images/bi_logo.png";
-import HomeTitle from "../components/HomeTitle";
-import HomeContent from "../components/HomeContent";
+import HomeTitle from "../components/Home/HomeTitle";
+import HomeContent from "../components/Home/HomeContent";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true); // 로딩 상태
@@ -14,13 +14,13 @@ const Home = () => {
     // 이미지 애니메이션 상태 토글
     const interval = setInterval(() => {
       setShow((prev) => !prev);
-    }, 3000);
+    }, 2000);
 
     // 로딩 상태를 5초 후에 해제
     const loadingTimeout = setTimeout(() => {
       setIsLoading(false);
       clearInterval(interval); // 애니메이션 종료
-    }, 5000); // 5초 후 로딩 완료
+    }, 2000); // 5초 후 로딩 완료
 
     return () => {
       clearInterval(interval);
@@ -71,5 +71,5 @@ const LoadingImage = styled.img`
   width: 200px;
   height: auto;
   opacity: 0;
-  animation: ${fadeInOut} 3s infinite; /* 애니메이션 반복 */
+  animation: ${fadeInOut} 1s infinite; /* 애니메이션 반복 */
 `;

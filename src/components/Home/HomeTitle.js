@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import dgm_logo from "../assets/images/dgm_logo.png";
-import bi_logo from "../assets/images/bi_logo.png";
+import dgm_logo from "../../assets/images/dgm_logo.png";
+import bi_logo from "../../assets/images/bi_logo.png";
 
 const HomeTitle = () => {
   return (
