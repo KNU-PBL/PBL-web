@@ -6,6 +6,7 @@ const Container = styled.div`
   height: 100vh; /* 뷰포트 높이에 맞춤 */
   width: 100%; /* 뷰포트 너비에 맞춤 */
   max-width: 768px; /* 데스크톱에서는 최대 너비 제한 */
+  min-width: 320px; /* 최소 너비 설정 (작은 화면 대응) */
   margin: 0 auto; /* 화면 가운데 정렬 */
   padding: 0 20px;
   box-sizing: border-box;
