@@ -2,10 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const AccessCard = ({ date, name }) => {
+  // T를 공백으로 대체
+  const formattedDate = date.replace("T", " ");
+
   return (
     <CardContainer>
       <Name>{name}</Name>
-      <Date>{date}</Date>
+      <Date>{formattedDate}</Date>
     </CardContainer>
   );
 };
@@ -25,5 +28,5 @@ const CardContainer = styled.div`
 const Name = styled.div``;
 
 const Date = styled.div`
-  width: 40%;
+  width: 50%;
 `;

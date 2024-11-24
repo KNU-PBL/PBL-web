@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import UnknownCard from "./UnknownCard";
+import getUnknownLog from "../../api/getUnknownLog";
 
 const UnknownContent = () => {
-  const data = [
-    "2024-10-03 오전 11:23",
-    "2024-11-03 오전 11:23",
-    "2024-12-03 오전 11:23",
-  ];
+  const [UnknownData, setUnknownData] = useState([]);
+
+  useEffect(() => {
+    const fetchUnknownLog = async () => {
+      try {
+        const response = await getUnknownLog();
+        setUnknownData(response);
+      } catch (error) {
+        console.error("사용자 데이터를 가져오는 중 오류 발생 : ", error);
+      }
+    };
+
+    fetchUnknownLog();
+  }, []);
 
   return (
     <UnknownContentContainer>
-      {data.map((data, index) => (
-        <UnknownCard key={index} date={data} />
+      {UnknownData.map((data, index) => (
+        <UnknownCard key={index} date={data.detectedTime} />
       ))}
     </UnknownContentContainer>
   );

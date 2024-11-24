@@ -2,10 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const UnknownCard = ({ date }) => {
+  // T를 공백으로 대체
+  const formattedDate = date.replace("T", " ");
+
   return (
     <CardContainer>
       <Date>미등록자가 인식되었습니다.</Date>
-      <Notice>{date}</Notice>
+      <Notice>{formattedDate}</Notice>
       <ConfirmButtonContainer>
         <ConfirmButton>확 인</ConfirmButton>
       </ConfirmButtonContainer>
