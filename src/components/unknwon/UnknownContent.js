@@ -22,7 +22,7 @@ const UnknownContent = () => {
   return (
     <UnknownContentContainer>
       {UnknownData.map((data, index) => (
-        <UnknownCard key={index} date={data.detectedTime} />
+        <UnknownCard key={index} date={data.detectionTime} />
       ))}
     </UnknownContentContainer>
   );
