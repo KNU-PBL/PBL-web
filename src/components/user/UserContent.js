@@ -21,6 +21,7 @@ const UserContent = () => {
 
   return (
     <UserContentContainer>
+      <CreateUserButton>사용자 신규 등록</CreateUserButton>
       {userData.map((user, index) => (
         <UserCard key={index} name={user.name} imgUrl={user.imgUrl} />
       ))}
@@ -36,4 +37,24 @@ const UserContentContainer = styled.div`
   gap: 20px;
   justify-content: space-between;
   margin-top: 20px;
+`;
+
+const CreateUserButton = styled.button`
+  font-family: Pretendard;
+  padding: 30px;
+  margin: auto;
+  width: 80%;
+  font-size: 35px;
+  font-weight: 500;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  background-color: #565656;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+  }
 `;

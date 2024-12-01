@@ -10,7 +10,7 @@ const UnknownCard = ({ date }) => {
       <Date>미등록자가 인식되었습니다.</Date>
       <Notice>{formattedDate}</Notice>
       <ConfirmButtonContainer>
-        <ConfirmButton>확 인</ConfirmButton>
+        <ConfirmButton>숨 김</ConfirmButton>
       </ConfirmButtonContainer>
     </CardContainer>
   );
@@ -45,7 +45,16 @@ const ConfirmButtonContainer = styled.div`
 
 const ConfirmButton = styled.button`
   font-family: Pretendard;
-  font-size: 15px;
+  background: #bdbdbd;
+  font-size: 20px;
   font-weight: 600;
   padding: 12px 24px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    border: 1px solid #fff;
+    background-color: #000;
+    color: #fff;
+  }
 `;
