@@ -10,8 +10,8 @@ const Container = styled.div`
   margin: 0 auto; /* 화면 가운데 정렬 */
   padding: 0 20px;
   box-sizing: border-box;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: var(--main-color);
   overflow-y: auto; /* 세로 스크롤 허용 */
 
   /* 기본 스타일 */

@@ -34,8 +34,7 @@ const BackButton = styled.button`
   font-family: inherit;
   border-radius: 50px;
   border: none;
-  background-color: #000;
-  color: white;
+  background: none;
   cursor: pointer;
   transition: all 0.3s ease;
 `;

@@ -21,7 +21,7 @@ const TitleContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 100px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--main-color);
   padding: 20px 0px;
 `;
 

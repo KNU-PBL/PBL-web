@@ -3,6 +3,12 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
+  :root {
+    --main-color : #f95252;
+    --gray-color : #787878;
+    --darkgray-color : #383838;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -12,11 +18,15 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.5;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
   }
 `;
 
