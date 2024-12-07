@@ -2,18 +2,44 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { AiOutlineUser as UserIcon } from "react-icons/ai";
 import { AiOutlineLock as LockIcon } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 const LoginContent = () => {
   const [focusedInput, setFocusedInput] = useState(null);
+  const [formData, setFormData] = useState({ username: "", password: "" });
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { username, password } = formData;
+
+    // 예시: 기본 검증 로직
+    if (username === "admin" && password === "1234qwer") {
+      navigate("home");
+      setError(""); // 에러 초기화
+    } else {
+      setError("아이디 혹은 비밀번호가 올바르지 않습니다.");
+      alert(error);
+    }
+  };
 
   return (
     <LoginContainer>
-      <LoginForm>
+      <LoginForm onSubmit={handleSubmit}>
         <LoginInputContainer>
           <StyledUserIcon size={50} $isFocused={focusedInput === "username"} />
           <LoginInput
             type="text"
+            name="username"
             placeholder="username"
+            value={formData.username}
+            onChange={handleChange}
             onFocus={() => setFocusedInput("username")}
             onBlur={() => setFocusedInput(null)}
           />
@@ -22,11 +48,15 @@ const LoginContent = () => {
           <StyledLockIcon size={50} $isFocused={focusedInput === "password"} />
           <LoginInput
             type="password"
+            name="password"
             placeholder="password"
+            value={formData.password}
+            onChange={handleChange}
             onFocus={() => setFocusedInput("password")}
             onBlur={() => setFocusedInput(null)}
           />
         </LoginInputContainer>
+        {error && <ErrorMessage>{error}</ErrorMessage>}
         <LoginBtn type="submit">LOGIN</LoginBtn>
       </LoginForm>
     </LoginContainer>
@@ -35,6 +65,7 @@ const LoginContent = () => {
 
 export default LoginContent;
 
+// 스타일 컴포넌트들
 const StyledUserIcon = styled(UserIcon)`
   color: ${({ $isFocused }) =>
     $isFocused ? "var(--main-color)" : "var(--gray-color)"};
@@ -96,4 +127,17 @@ const LoginBtn = styled.button`
   font-size: 30px;
   font-family: Pretendard;
   font-weight: 600;
+  transition: 0.5s;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid var(--main-color);
+    background-color: #fff;
+    color: var(--main-color);
+  }
+`;
+
+const ErrorMessage = styled.p`
+  color: red;
+  font-size: 18px;
+  text-align: center;
 `;
