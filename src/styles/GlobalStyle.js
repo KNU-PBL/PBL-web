@@ -30,6 +30,12 @@ const GlobalStyle = createGlobalStyle`
     background-position: center;
   }
 
+  @media (max-width: 768px) {
+  body {
+    align-items: start;
+  }
+}
+
   ::-webkit-scrollbar {
   width: 15px; /* 스크롤바의 너비 */
   height: 10px; /* 스크롤바의 높이 (수평 스크롤) */
