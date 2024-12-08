@@ -13,6 +13,10 @@ const Container = styled.div`
   color: var(--main-color);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   overflow-y: auto;
+
+  @media (max-width: 768px) {
+    width: 100%; /* 모바일 화면에서는 100%로 확장 */
+  }
 `;
 
 export default Container;
