@@ -31,6 +31,10 @@ const CardContainer = styled.div`
   height: 30%;
   overflow: hidden;
   box-sizing: border-box;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const ImageWrapper = styled.div`
