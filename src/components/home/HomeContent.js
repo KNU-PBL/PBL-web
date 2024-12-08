@@ -4,14 +4,12 @@ import styled from "styled-components";
 import getAccessLog from "../../api/getAccessLog";
 import HomeBtnCard from "./HomeBtnCard";
 import getUnknownLog from "../../api/getUnknownLog";
-import getUser from "../../api/getUser";
 
 const HomeContent = () => {
   const navigate = useNavigate();
 
   const [AccessData, setAccessData] = useState([]);
   const [UnknownData, setUnknownData] = useState([]);
-  const [userData, setUserData] = useState([]);
 
   const fetchAccessLog = async () => {
     try {
@@ -34,19 +32,9 @@ const HomeContent = () => {
     }
   };
 
-  const fetchUsers = async () => {
-    try {
-      const users = await getUser();
-      setUserData(users);
-    } catch (error) {
-      console.error("사용자 데이터를 가져오는 중 오류 발생 : ", error);
-    }
-  };
-
   useEffect(() => {
     fetchAccessLog();
     fetchUnknownLog();
-    fetchUsers();
   }, []);
 
   return (
