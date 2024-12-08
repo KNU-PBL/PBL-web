@@ -58,4 +58,7 @@ const UserTitle = styled.div`
   padding: 0 10px;
   width: 100%;
   color: var(--darkgray-color);
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;

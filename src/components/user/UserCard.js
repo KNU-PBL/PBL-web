@@ -32,8 +32,10 @@ const CardContainer = styled.div`
   overflow: hidden;
   box-sizing: border-box;
   @media (max-width: 768px) {
-    width: 100%;
     height: auto;
+    font-size: 15px;
+    width: 48%;
+    padding: 10px 20px;
   }
 `;
 
@@ -50,4 +52,7 @@ const ProfileImg = styled.img`
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
+  @media (max-width: 768px) {
+    height: 200px;
+  }
 `;
