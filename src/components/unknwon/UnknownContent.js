@@ -39,6 +39,9 @@ const UnknownContentContainer = styled.div`
   padding: 20px;
   min-height: 100%;
   background-color: var(--background-color);
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 `;
 
 const UnknownTitle = styled.div`

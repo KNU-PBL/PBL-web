@@ -29,17 +29,26 @@ const LoginTitleContainer = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 30px;
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 `;
 
 const LoginTitleText = styled.div`
   color: var(--darkgray-color);
   font-size: 50px;
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 `;
 
 const LoginDesc = styled.div`
   color: var(--gray-color);
   font-size: 20px;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -51,16 +60,27 @@ const ImageContainer = styled.div`
   color: var(--gray-color);
   gap: 10px;
   margin-bottom: 30px;
+  @media (max-width: 768px) {
+    font-size: 30px;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
 `;
 
 const LoginImage1 = styled.img`
   width: 100px;
   height: auto;
+  @media (max-width: 768px) {
+    width: 75px;
+  }
 `;
 
 const LoginImage2 = styled.img`
   width: 75px;
   height: auto;
+  @media (max-width: 768px) {
+    width: 50px;
+  }
 `;
 
 export default LoginTitle;
