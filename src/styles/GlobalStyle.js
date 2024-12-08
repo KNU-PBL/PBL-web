@@ -18,7 +18,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.5;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
     height: 100vh;

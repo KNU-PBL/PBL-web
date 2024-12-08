@@ -1,18 +1,17 @@
 import React from "react";
-import styled from "styled-components";
+import { Outlet } from "react-router-dom";
+import Container from "../../styles/Container";
+import Header from "./Header";
+import Footer from "./Footer";
 
-const Layout = ({ children }) => {
+function Layout() {
   return (
-    <Background>
-      <main style={{ flex: 1 }}>{children}</main>
-    </Background>
+    <Container>
+      <Header />
+      <Outlet /> {/* 중첩된 콘텐츠가 렌더링될 부분 */}
+      <Footer />
+    </Container>
   );
-};
+}
 
 export default Layout;
-
-const Background = styled.div`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-`;

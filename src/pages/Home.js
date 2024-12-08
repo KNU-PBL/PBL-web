@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Container from "../styles/Container";
-import HomeTitle from "../components/home/HomeTitle";
 import HomeContent from "../components/home/HomeContent";
-import LoadingBar from "../components/common/LoadingBar";
+import LoadingAnimation from "../components/common/LoadingAnimation";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true); // 로딩 상태
@@ -12,18 +10,7 @@ const Home = () => {
     return () => clearTimeout(timer); // 컴포넌트 언마운트 시 타이머 정리
   }, []);
 
-  return (
-    <>
-      {isLoading ? (
-        <Container>{isLoading && <LoadingBar />}</Container>
-      ) : (
-        <Container>
-          <HomeTitle />
-          <HomeContent />
-        </Container>
-      )}
-    </>
-  );
+  return <>{isLoading ? <LoadingAnimation /> : <HomeContent />}</>;
 };
 
 export default Home;
