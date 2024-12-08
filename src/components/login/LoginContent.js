@@ -32,7 +32,7 @@ const LoginContent = () => {
     <LoginContainer>
       <LoginForm onSubmit={handleSubmit}>
         <LoginInputContainer>
-          <StyledUserIcon size={50} $isFocused={focusedInput === "username"} />
+          <StyledUserIcon $isFocused={focusedInput === "username"} />
           <LoginInput
             type="text"
             name="username"
@@ -44,7 +44,7 @@ const LoginContent = () => {
           />
         </LoginInputContainer>
         <LoginInputContainer>
-          <StyledLockIcon size={50} $isFocused={focusedInput === "password"} />
+          <StyledLockIcon $isFocused={focusedInput === "password"} />
           <LoginInput
             type="password"
             name="password"
@@ -69,12 +69,20 @@ const StyledUserIcon = styled(UserIcon)`
   color: ${({ $isFocused }) =>
     $isFocused ? "var(--main-color)" : "var(--gray-color)"};
   transition: color 0.3s ease;
+  font-size: 50px;
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 
 const StyledLockIcon = styled(LockIcon)`
   color: ${({ $isFocused }) =>
     $isFocused ? "var(--main-color)" : "var(--gray-color)"};
   transition: color 0.3s ease;
+  font-size: 50px;
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 
 const LoginContainer = styled.div`
@@ -94,11 +102,12 @@ const LoginInputContainer = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
+  justify-content: center;
 `;
 
 const LoginInput = styled.input`
   height: 70px;
-  width: 100%;
+  width: 80%;
   outline: none;
   border: none;
   border-bottom: 2px solid var(--gray-color);
@@ -112,6 +121,10 @@ const LoginInput = styled.input`
   }
   &::placeholder {
     color: #f0f0f0;
+  }
+  @media (max-width: 768px) {
+    height: 50px;
+    font-size: 25px;
   }
 `;
 
@@ -132,6 +145,10 @@ const LoginBtn = styled.button`
     border: 1px solid var(--main-color);
     background-color: #fff;
     color: var(--main-color);
+  }
+  @media (max-width: 768px) {
+    height: 50px;
+    font-size: 20px;
   }
 `;
 
