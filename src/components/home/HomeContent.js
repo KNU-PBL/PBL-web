@@ -45,7 +45,7 @@ const HomeContent = () => {
         }}
       >
         <HomeBtnTitle>출입 기록 관리</HomeBtnTitle>
-        {AccessData.slice(0, 4).map((el, index) => (
+        {AccessData.slice(0, 3).map((el, index) => (
           <HomeBtnCard key={index} data={el} />
         ))}
         <HomeBtnText>전체 보기 &gt;</HomeBtnText>
@@ -56,7 +56,7 @@ const HomeContent = () => {
         }}
       >
         <HomeBtnTitle>미등록자 인식 기록</HomeBtnTitle>
-        {UnknownData.slice(0, 4).map((el, index) => (
+        {UnknownData.slice(0, 3).map((el, index) => (
           <HomeBtnCard key={index} data={el} />
         ))}
         <HomeBtnText>전체 보기 &gt;</HomeBtnText>
@@ -92,7 +92,7 @@ const HomeButton = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  height: 40%;
+  height: 35%;
   padding: 20px;
   background: #fff;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
@@ -101,7 +101,7 @@ const HomeButton = styled.div`
   transition: all 0.3s ease;
   &:hover {
     width: 92%;
-    height: 42%;
+    height: 37%;
   }
 `;
 

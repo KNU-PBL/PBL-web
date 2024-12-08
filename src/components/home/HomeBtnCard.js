@@ -32,6 +32,6 @@ const CardContainer = styled.div`
 const Name = styled.div``;
 
 const Date = styled.div`
-  width: 45%;
+  width: 35%;
   text-align: start;
 `;

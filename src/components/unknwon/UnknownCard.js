@@ -30,5 +30,5 @@ const CardContainer = styled.div`
 const Name = styled.div``;
 
 const Date = styled.div`
-  width: 50%;
+  width: 55%;
 `;
