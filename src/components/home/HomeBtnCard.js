@@ -23,8 +23,8 @@ const CardContainer = styled.div`
   justify-content: space-between;
   background: #fff;
   width: 100%;
-  padding: 8px 0;
-  font-size: 25px;
+  padding: 3px 0;
+  font-size: 20px;
   font-weight: 600;
   color: var(--gray-color);
 `;

@@ -107,7 +107,7 @@ const HomeButton = styled.div`
 
 const HomeBtnTitle = styled.div`
   width: 100%;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 700;
   color: var(--darkgray-color);
 `;

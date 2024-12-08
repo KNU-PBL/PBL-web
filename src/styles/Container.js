@@ -4,8 +4,8 @@ const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 768px;
+  height: 900px;
+  width: 700px;
   min-width: 320px;
   margin: 0 auto;
   box-sizing: border-box;

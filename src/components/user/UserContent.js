@@ -47,7 +47,7 @@ const UserListContinaer = styled.div`
   display: flex;
   flex-wrap: wrap;
   height: 100%;
-  gap: 14px;
+  gap: 12px;
   justify-content: space-between;
   background-color: var(--background-color);
 `;
