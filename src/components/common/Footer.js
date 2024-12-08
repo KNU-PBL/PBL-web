@@ -89,27 +89,42 @@ const StyledHomeIcon = styled(HomeIcon)`
   font-size: 32px;
   color: var(--gray-color);
   transition: color 0.3s ease;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const StyledAccessIcon = styled(AccessIcon)`
   font-size: 32px;
   color: var(--gray-color);
   transition: color 0.3s ease;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const StyledUnknownIcon = styled(UnknownIcon)`
   font-size: 32px;
   color: var(--gray-color);
   transition: color 0.3s ease;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const StyledUserIcon = styled(UserIcon)`
   font-size: 32px;
   color: var(--gray-color);
   transition: color 0.3s ease;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const BtnText = styled.div`
   font-size: 20px;
   font-weight: 500;
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `;
