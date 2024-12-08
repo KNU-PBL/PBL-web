@@ -24,7 +24,7 @@ const CardContainer = styled.div`
   color: var(--gray-color);
   background-color: #fff;
   border-radius: 20px;
-  width: 49%;
+  width: 48%;
   padding: 20px;
   font-size: 40px;
   font-weight: 600;

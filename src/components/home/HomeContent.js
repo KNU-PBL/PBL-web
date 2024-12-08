@@ -139,6 +139,7 @@ const HomeBtnText = styled.div`
 `;
 
 const HomeBtnCardWrapper = styled.div`
+  width: 100%;
   @media (max-width: 768px) {
     display: none;
   }

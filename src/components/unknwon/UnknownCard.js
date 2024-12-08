@@ -20,7 +20,7 @@ const CardContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   padding: 20px;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
   color: var(--gray-color);
   background-color: #fff;
