@@ -6,7 +6,6 @@ import Unknown from "./pages/Unknown";
 import AccessLog from "./pages/AccessLog";
 import User from "./pages/User";
 import Login from "./pages/Login";
-import Background from "./components/common/Background";
 import Layout from "./components/common/Layout";
 
 function App() {
@@ -14,17 +13,15 @@ function App() {
     <>
       <GlobalStyle />
       <Router>
-        <Background>
-          <Routes>
-            <Route path="/" element={<Login />} />
-            <Route element={<Layout />}>
-              <Route path="/home" element={<Home />} />
-              <Route path="/unknown" element={<Unknown />} />
-              <Route path="/access" element={<AccessLog />} />
-              <Route path="/user" element={<User />} />
-            </Route>
-          </Routes>
-        </Background>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route element={<Layout />}>
+            <Route path="/home" element={<Home />} />
+            <Route path="/unknown" element={<Unknown />} />
+            <Route path="/access" element={<AccessLog />} />
+            <Route path="/user" element={<User />} />
+          </Route>
+        </Routes>
       </Router>
     </>
   );

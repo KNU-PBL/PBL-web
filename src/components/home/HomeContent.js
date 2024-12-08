@@ -65,7 +65,7 @@ const HomeContent = () => {
         onClick={() => {
           navigate("/user");
         }}
-        style={{ height: "10%", flexDirection: "row" }}
+        style={{ height: "12%", flexDirection: "row" }}
       >
         <HomeBtnTitle>사용자 목록</HomeBtnTitle>
         <HomeBtnText>전체 보기 &gt;</HomeBtnText>
@@ -99,6 +99,7 @@ const HomeButton = styled.div`
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
+  overflow-y: auto;
   &:hover {
     width: 92%;
     height: 37%;
