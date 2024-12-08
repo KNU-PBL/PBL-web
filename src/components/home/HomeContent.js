@@ -45,9 +45,11 @@ const HomeContent = () => {
         }}
       >
         <HomeBtnTitle>출입 기록 관리</HomeBtnTitle>
-        {AccessData.slice(0, 3).map((el, index) => (
-          <HomeBtnCard key={index} data={el} />
-        ))}
+        <HomeBtnCardWrapper>
+          {AccessData.slice(0, 3).map((el, index) => (
+            <HomeBtnCard key={index} data={el} />
+          ))}
+        </HomeBtnCardWrapper>
         <HomeBtnText>전체 보기 &gt;</HomeBtnText>
       </HomeButton>
       <HomeButton
@@ -56,9 +58,11 @@ const HomeContent = () => {
         }}
       >
         <HomeBtnTitle>미등록자 인식 기록</HomeBtnTitle>
-        {UnknownData.slice(0, 3).map((el, index) => (
-          <HomeBtnCard key={index} data={el} />
-        ))}
+        <HomeBtnCardWrapper>
+          {UnknownData.slice(0, 3).map((el, index) => (
+            <HomeBtnCard key={index} data={el} />
+          ))}
+        </HomeBtnCardWrapper>
         <HomeBtnText>전체 보기 &gt;</HomeBtnText>
       </HomeButton>
       <HomeButton
@@ -104,6 +108,14 @@ const HomeButton = styled.div`
     width: 92%;
     height: 37%;
   }
+  @media (max-width: 768px) {
+    height: 12%;
+    flex-direction: row;
+    &:hover {
+      width: 92%;
+      height: 15%;
+    }
+  }
 `;
 
 const HomeBtnTitle = styled.div`
@@ -111,6 +123,9 @@ const HomeBtnTitle = styled.div`
   font-size: 25px;
   font-weight: 700;
   color: var(--darkgray-color);
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `;
 
 const HomeBtnText = styled.div`
@@ -118,4 +133,13 @@ const HomeBtnText = styled.div`
   font-size: 25px;
   font-weight: 500;
   text-align: end;
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+`;
+
+const HomeBtnCardWrapper = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
