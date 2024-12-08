@@ -33,6 +33,9 @@ const Content = styled.div`
   margin-bottom: 150px; /* Footer의 높이 */
   overflow-y: auto; /* 세로 스크롤 가능 */
   box-sizing: border-box;
+  @media (max-width: 768px) {
+    margin-bottom: 70px;
+  }
 `;
 
 const FixedFooter = styled.div`

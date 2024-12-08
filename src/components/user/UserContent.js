@@ -50,6 +50,9 @@ const UserListContinaer = styled.div`
   gap: 12px;
   justify-content: space-between;
   background-color: var(--background-color);
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
 `;
 
 const UserTitle = styled.div`

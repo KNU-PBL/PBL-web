@@ -59,6 +59,9 @@ const FooterContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media (max-width: 768px) {
+    height: 70px;
+  }
 `;
 
 const FooterBtn = styled.div`
