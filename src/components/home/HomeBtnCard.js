@@ -24,11 +24,14 @@ const CardContainer = styled.div`
   background: #fff;
   width: 100%;
   padding: 8px 0;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   color: var(--gray-color);
 `;
 
 const Name = styled.div``;
 
-const Date = styled.div``;
+const Date = styled.div`
+  width: 45%;
+  text-align: start;
+`;

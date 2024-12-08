@@ -25,7 +25,6 @@ const LoginContent = () => {
       setError(""); // 에러 초기화
     } else {
       setError("아이디 혹은 비밀번호가 올바르지 않습니다.");
-      alert(error);
     }
   };
 

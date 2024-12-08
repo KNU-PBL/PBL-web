@@ -21,10 +21,12 @@ const UserContent = () => {
 
   return (
     <UserContentContainer>
-      <CreateUserButton>사용자 신규 등록</CreateUserButton>
-      {userData.map((user, index) => (
-        <UserCard key={index} name={user.name} imgUrl={user.imgUrl} />
-      ))}
+      <UserTitle>사용자 목록</UserTitle>
+      <UserListContinaer>
+        {userData.map((user, index) => (
+          <UserCard key={index} name={user.name} imgUrl={user.faceImg} />
+        ))}
+      </UserListContinaer>
     </UserContentContainer>
   );
 };
@@ -33,28 +35,27 @@ export default UserContent;
 
 const UserContentContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  min-height: 100%;
+  background-color: var(--background-color);
 `;
 
-const CreateUserButton = styled.button`
-  font-family: Pretendard;
-  padding: 30px;
-  margin: auto;
-  width: 80%;
-  font-size: 35px;
-  font-weight: 500;
-  border-radius: 50px;
-  border: 1px solid #fff;
-  background-color: #565656;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  &:hover {
-    border: 1px solid #000;
-    background-color: #fff;
-    color: #000;
-  }
+const UserListContinaer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  gap: 14px;
+  justify-content: space-between;
+  background-color: var(--background-color);
+`;
+
+const UserTitle = styled.div`
+  font-size: 40px;
+  font-weight: 700;
+  padding: 0 10px;
+  width: 100%;
+  color: var(--darkgray-color);
 `;

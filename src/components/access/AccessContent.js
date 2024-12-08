@@ -20,6 +20,7 @@ const AccessContent = () => {
   }, []);
   return (
     <AccessContentContainer>
+      <AccessLogTitle>출입 기록</AccessLogTitle>
       {AccessData.map((data, index) => (
         <AccessCard key={index} date={data.entryTime} name={data.userName} />
       ))}
@@ -35,5 +36,14 @@ const AccessContentContainer = styled.div`
   align-items: center;
   gap: 10px;
   padding: 20px;
+  min-height: 100%;
   background-color: var(--background-color);
+`;
+
+const AccessLogTitle = styled.div`
+  font-size: 40px;
+  font-weight: 700;
+  padding: 0 10px;
+  width: 100%;
+  color: var(--darkgray-color);
 `;

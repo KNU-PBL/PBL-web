@@ -31,8 +31,7 @@ const ImageContainer = styled.div`
   justify-content: center; /* 수평 중앙 정렬 */
   align-items: center; /* 수직 중앙 정렬 */
   width: 100%;
-  height: 100vh; /* 화면 전체 높이 */
-  padding-bottom: 300px;
+  height: 100%;
 `;
 
 // 이미지와 로딩 선을 감싸는 래퍼

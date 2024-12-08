@@ -21,6 +21,7 @@ const UnknownContent = () => {
 
   return (
     <UnknownContentContainer>
+      <UnknownTitle>미등록자 인식 기록</UnknownTitle>
       {UnknownData.map((data, index) => (
         <UnknownCard key={index} date={data.detectionTime} />
       ))}
@@ -34,7 +35,16 @@ const UnknownContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  height: 100%;
-  margin-top: 20px;
+  gap: 10px;
+  padding: 20px;
+  min-height: 100%;
+  background-color: var(--background-color);
+`;
+
+const UnknownTitle = styled.div`
+  font-size: 40px;
+  font-weight: 700;
+  padding: 0 10px;
+  width: 100%;
+  color: var(--darkgray-color);
 `;

@@ -6,11 +6,11 @@ const UserCard = ({ name, imgUrl }) => {
     <CardContainer>
       {name}
       <ImageWrapper>
-        <ProfileImg src={imgUrl} alt={`${name} 프로필 이미지`} />
+        <ProfileImg
+          src={`http://52.78.196.254:8080${imgUrl}`}
+          alt={`${name} 프로필 이미지`}
+        />
       </ImageWrapper>
-      <ModifyButtonContainer>
-        <ModifyButton>수 정</ModifyButton>
-      </ModifyButtonContainer>
     </CardContainer>
   );
 };
@@ -21,8 +21,10 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #383838;
-  width: 48%;
+  color: var(--gray-color);
+  background-color: #fff;
+  border-radius: 20px;
+  width: 49%;
   padding: 20px;
   font-size: 40px;
   font-weight: 600;
@@ -41,29 +43,7 @@ const ImageWrapper = styled.div`
 
 const ProfileImg = styled.img`
   width: 100%;
-  height: auto;
-  object-fit: contain;
-`;
-
-const ModifyButtonContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;
-
-const ModifyButton = styled.button`
-  font-family: Pretendard;
-  font-weight: 500;
-  background-color: #565656;
-  border: 1px solid #fff;
-  color: white;
-  padding: 10px 15px;
+  height: 400px;
+  object-fit: cover;
   border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  &:hover {
-    border: 1px solid #000;
-    background-color: #fff;
-    color: #000;
-  }
 `;

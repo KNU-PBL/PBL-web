@@ -91,8 +91,8 @@ const HomeButton = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  height: 30%;
+  width: 90%;
+  height: 40%;
   padding: 20px;
   background: #fff;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
@@ -100,14 +100,14 @@ const HomeButton = styled.div`
   cursor: pointer;
   transition: all 0.3s ease;
   &:hover {
-    width: 82%;
-    height: 32%;
+    width: 92%;
+    height: 42%;
   }
 `;
 
 const HomeBtnTitle = styled.div`
   width: 100%;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 700;
   color: var(--darkgray-color);
 `;
