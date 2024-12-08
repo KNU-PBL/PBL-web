@@ -16,6 +16,7 @@ const Container = styled.div`
 
   @media (max-width: 768px) {
     width: 100%; /* 모바일 화면에서는 100%로 확장 */
+    height: 100%;
   }
 `;
 
