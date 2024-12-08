@@ -1,10 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <TitleContainer>
-      <TitleText>PBL10</TitleText>
+      <TitleText
+        onClick={() => {
+          navigate("/home");
+        }}
+      >
+        PBL10
+      </TitleText>
     </TitleContainer>
   );
 };
@@ -22,6 +31,7 @@ const TitleText = styled.div`
   display: flex;
   font-size: 50px;
   font-weight: 700;
+  cursor: pointer;
 `;
 
 export default Header;

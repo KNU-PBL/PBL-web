@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     --main-color : #f95252;
     --gray-color : #787878;
     --darkgray-color : #383838;
+    --background-color : #f2edea;
   }
 
   * {
@@ -26,6 +27,23 @@ const GlobalStyle = createGlobalStyle`
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+  }
+
+  ::-webkit-scrollbar {
+  width: 15px; /* 스크롤바의 너비 */
+  height: 10px; /* 스크롤바의 높이 (수평 스크롤) */
+  }
+
+  /* 스크롤바 트랙 (배경) */
+  ::-webkit-scrollbar-track {
+    background: var(--gray-color);
+    border-radius: 10px;
+  }
+
+  /* 스크롤바 핸들 (움직이는 부분) */
+  ::-webkit-scrollbar-thumb {
+    background: #c0c0c0; /* 핸들의 색상 */
+    border-radius: 10px;
   }
 `;
 

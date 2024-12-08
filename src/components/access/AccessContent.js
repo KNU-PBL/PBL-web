@@ -33,7 +33,7 @@ const AccessContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  height: 100%;
-  margin-top: 20px;
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--background-color);
 `;

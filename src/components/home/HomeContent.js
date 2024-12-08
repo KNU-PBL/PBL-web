@@ -82,7 +82,7 @@ const HomeContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #f2edea;
+  background: var(--background-color);
   gap: 20px;
 `;
 
